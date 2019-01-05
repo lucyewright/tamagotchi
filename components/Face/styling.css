@@ -1,0 +1,17 @@
+.pupil {
+  transition: cy 0.5s, cx 0.5s;
+}
+
+.eyeLids {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.eyeLids.droopy {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.eyeLids.awake {
+  opacity: 0;
+  transform: rotateX(90deg);
+}

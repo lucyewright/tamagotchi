@@ -15,8 +15,18 @@ const Face = (props) => (
       stroke="black"
       strokeWidth={4}
     />
-    <Eye side="right" look={props.look} droopyEyes={props.droopyEyes} />
-    <Eye side="left" look={props.look} droopyEyes={props.droopyEyes} />
+    <Eye
+      side="right"
+      look={props.look}
+      droopyEyes={props.droopyEyes}
+      dead={props.dead}
+    />
+    <Eye
+      side="left"
+      look={props.look}
+      droopyEyes={props.droopyEyes}
+      dead={props.dead}
+    />
     <rect
       className="mouth"
       width={MOUTH}

@@ -1,31 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
+import 'babel-polyfill';
+
 import './styles.css';
 
-import Tamagotchi from './components/Tamagotchi/Tamagotchi';
-
-const App = () => {
-  return (
-    <div>
-      <nav>
-        <h1>My Tamagotchi github friends</h1>
-        <input placeholder="Github username here..." type="text" />
-      </nav>
-      <section className="allGames">
-        <div>
-          <Tamagotchi />
-        </div>
-      </section>
-    </div>
-  );
-};
-
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <Tamagotchi />
-//     </div>
-//   );
-// };
+import App from './components/App/App';
 
 render(<App />, document.getElementById('root'));

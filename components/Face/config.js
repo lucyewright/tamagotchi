@@ -1,1 +1,1 @@
-export const FACE_SIZE = 200;
+export const FACE_SIZE = 100;

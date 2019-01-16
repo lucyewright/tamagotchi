@@ -48,23 +48,31 @@ const Eye = (props) => (
         : FACE_SIZE / 2 + EYE_DISTANCE
     } ${FACE_SIZE / 2 - EYE_SIZE})`}
   >
-    <circle r={EYE_SIZE} fill="white" stroke="black" strokeWidth={2} />
-    <circle
-      className="pupil"
-      r={PUPIL_SIZE}
-      cx={getPupilX(props.look)}
-      cy={getPupilY(props.look)}
-    />
-    <path
-      d={`M${EYE_SIZE},0 a1,1 0 1,0 -${EYE_SIZE * 2},0 z`}
-      fill="orange"
-      strokeWidth={2}
-      stroke="black"
-      style={{
-        transformOrigin: `0px -${EYE_SIZE}px`
-      }}
-      className={`eyeLids ${props.droopyEyes ? 'droopy' : 'awake'}`}
-    />
+    {props.dead ? (
+      <text textAnchor="middle" alignmentBaseline="middle">
+        X
+      </text>
+    ) : (
+      <React.Fragment>
+        <circle r={EYE_SIZE} fill="white" stroke="black" strokeWidth={2} />
+        <circle
+          className="pupil"
+          r={PUPIL_SIZE}
+          cx={getPupilX(props.look)}
+          cy={getPupilY(props.look)}
+        />
+        <path
+          d={`M${EYE_SIZE},0 a1,1 0 1,0 -${EYE_SIZE * 2},0 z`}
+          fill="orange"
+          strokeWidth={2}
+          stroke="black"
+          style={{
+            transformOrigin: `0px -${EYE_SIZE}px`
+          }}
+          className={`eyeLids ${props.droopyEyes ? 'droopy' : 'awake'}`}
+        />
+      </React.Fragment>
+    )}
   </g>
 );
 

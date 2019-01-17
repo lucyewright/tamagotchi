@@ -1,7 +1,7 @@
 import React from 'react';
-
-import { TOKEN } from '../../token';
 import Tamagotchi from '../Tamagotchi/Tamagotchi';
+
+const TOKEN = process.env.TOKEN;
 
 class App extends React.Component {
     state = {

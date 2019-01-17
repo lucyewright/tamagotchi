@@ -2,11 +2,11 @@
     "name": "tamagotchi",
     "version": "1.0.0",
     "description": "My first attempt at creating a tamagotchi like game with react",
-    "main": "index.js",
+    "main": "index.html",
     "scripts": {
         "test": "jest --watch",
         "start": "parcel index.html",
-        "build": "TOKEN=99165dcbbca30977af5a173ee966b3d0ba462ebb parcel build index.html"
+        "build": "parcel build index.html"
     },
     "repository": {
         "type": "git",
